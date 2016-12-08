@@ -5,7 +5,11 @@ class ItemsController extends AppController {
 	public $components = array('RequestHandler');
 
     public function index() {
-         $this->set('items', $this->Item->find('all'));
+         $this->set('items', 
+		 	$this->Item->find('all',
+				array('order' => array('Item.theme ASC', 'Item.rank ASC'))
+			)
+		);
     }
 	
 	public function add() {
@@ -30,7 +34,19 @@ class ItemsController extends AppController {
         }
         $this->set('item', $item);
     }
-	
+
+    public function theme($theme = null) {
+        if (!$theme) {
+            throw new NotFoundException(__('Invalid theme'));
+        }
+
+        $items = $this->Item->findByTheme($theme);
+        if (!$item) {
+            throw new NotFoundException(__('Invalid theme'));
+        }
+        $this->set('items', $items);
+    }
+
 	public function edit($id = null) {
 		if (!$id) {
 			throw new NotFoundException(__('Invalid item'));

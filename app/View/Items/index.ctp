@@ -7,7 +7,10 @@
         <th>Id</th>
         <th>Name</th>
 		<th>Theme</th>
+		<th>Caption</th>
 		<th>Rank</th>
+		<th>Trivia</th>
+		<th>Filename</th>
         <th>Actions</th>
         <th>Created</th>
     </tr>
@@ -26,7 +29,10 @@
             ?>
         </td>
 		<td><?php echo $item['Item']['theme']; ?></td>
-		<td><?php echo $item['Item']['rank']; ?></td>        
+		<td><?php echo $item['Item']['caption']; ?></td>
+		<td><?php echo $item['Item']['rank']; ?></td>       
+        <td><?php echo $item['Item']['trivia']; ?></td>       
+        <td><?php echo $item['Item']['filename']; ?></td>        
         <td>
             <?php
                 echo $this->Form->postLink(

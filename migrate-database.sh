@@ -7,8 +7,8 @@ if [ ! -f app/Config/Schema/schema.php ]; then
 fi
 
 echo "Migrating database 'cake schema create' ..."
-cake schema create <<- EOL
-y
-y
-EOL
+# cake schema create <<- EOL
+# y
+# y
+# EOL
 

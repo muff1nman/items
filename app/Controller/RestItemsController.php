@@ -5,9 +5,9 @@ class RestItemsController extends AppController {
     public $helpers = array('Html', 'Form');
 	public $components = array('RequestHandler');
 
-
 	public function index() {
-		$items = $this->Item->find('all');
+		$items = $this->Item->find('all',
+            array('order' => array('Item.theme ASC', 'Item.rank ASC')));
         $this->set(array(
             'items' => $items,
             '_serialize' => array('items')
@@ -35,7 +35,14 @@ class RestItemsController extends AppController {
         ));
     }
 
-	
+	public function theme($theme) {
+        $items = $this->Item->findByTheme($theme);
+        $this->set(array(
+            'items' => $items,
+            '_serialize' => array('items')
+        ));
+    }
+
 	public function edit($id) {
         $this->Item->id = $id;
         if ($this->Item->save($this->request->data)) {

@@ -34,7 +34,6 @@ class AppSchema extends CakeSchema {
 		'filename' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50),		
         'image' => array('type' => 'binary', 'null' => true, 'default' => null),		
         'created' => array('type' => 'datetime', 'null' => true, 'default' => null, 'length' => 6),
-        'modified' => array('type' => 'datetime', 'null' => true, 'default' => null, 'length' => 6),            
 		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1))
 	);
 

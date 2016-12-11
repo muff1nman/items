@@ -83,7 +83,7 @@ INSERT INTO items (name, theme, caption, rank, trivia, filename)
 VALUES
 ('perth', 'cities', 'Perth', 5, 
 "<p>Perth. What is left to be said that has not been said. A lot actually as little has been said. </p> <p style='color:silver;font-size:80%;font-style:italic'>Rate Lord Mayor Lisa Scaffidi</p>",
-'data/images/cities/perh.jpg');
+'data/images/cities/perth.jpg');
 
 INSERT INTO items (name, theme, caption, rank, trivia, filename)
 VALUES

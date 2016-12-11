@@ -57,8 +57,8 @@ VALUES
 "<p>My name is Twizel and I from Christchurch. I had a bit role in the Lord of the Rings trilogy, but so did everyone else. </p> <p style='color:silver;font-size:80%;font-style:italic'>Like me and we can geek out on LOTR trivia for hours on end. </p>",
  'data/images/cats/christchurch.jpg');
 
-INSERT INTO items (name, theme, caption, rank, trivia, filename,
-created) VALUES ('adelaide', 'cities', 'Adelaide', 1,  
+INSERT INTO items (name, theme, caption, rank, trivia, filename)
+VALUES ('adelaide', 'cities', 'Adelaide', 1,  
 "<p>Among most liveable cities in the world. An extraordinary achievement given so few live there. Green credentials backed by policy of frequent random power outages. </p> <p style='color:silver;font-size:80%;font-style:italic'>Rate Lord Mayor Martin Haese</p>",
 'data/images/cities/adelaide.jpg');
 

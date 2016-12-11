@@ -26,8 +26,8 @@ class AppSchema extends CakeSchema {
 
 	public $items = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
-		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50),
 		'theme' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50),
+		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50),
 		'caption' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50),
         'rank' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10),
         'trivia' => array('type' => 'text', 'null' => false, 'default' => null, 'length' => 1024),

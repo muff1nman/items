@@ -4,9 +4,9 @@
 <p><?php echo $this->Html->link('Add Item', array('action' => 'add')); ?></p>
 <table>
     <tr>
+	<th>Theme</th>
         <th>Id</th>
         <th>Name</th>
-		<th>Theme</th>
 		<th>Caption</th>
 		<th>Rank</th>
 		<th>Trivia</th>
@@ -19,6 +19,7 @@
 
     <?php foreach ($items as $item): ?>
     <tr>
+	<td><?php echo $item['Item']['theme']; ?></td>
         <td><?php echo $item['Item']['id']; ?></td>
         <td>
             <?php
@@ -28,7 +29,6 @@
                 );
             ?>
         </td>
-		<td><?php echo $item['Item']['theme']; ?></td>
 		<td><?php echo $item['Item']['caption']; ?></td>
 		<td><?php echo $item['Item']['rank']; ?></td>       
         <td><?php echo $item['Item']['trivia']; ?></td>       
